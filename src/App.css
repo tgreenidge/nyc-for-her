@@ -1,28 +1,67 @@
 .App {
   text-align: center;
+  color: #c71585;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+#Header {
+  background: #ffe4d5;
+  height: 140px;
+  text-align: left;
+  font-size: 25px;
+  padding: 10px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+#Header i {
+  color: #c71585;
+  font-size: 50px;
+  display: block;
 }
 
-.App-title {
-  font-size: 1.5em;
+#Header .navbar-right li {
+  padding-right: 20px;
+  font-size: 15px;
+  text-align: center;
 }
 
-.App-intro {
-  font-size: large;
+#Header .navbar-right li i {
+  font-size: 25px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+#Header .navbar-right li a:hover {
+  text-decoration: none;
+  color: #c10d7e;
+  text-transform: uppercase;
+}
+
+#Header .navbar-right li a:visited {
+  color: #c71585;
+}
+
+#Footer {
+  background: #ffe4d5;
+  height: 75px;
+  text-align: center;
+  font-size: 20px;
+  padding: 1em;
+}
+
+#SignUpForm,
+#Login {
+  padding: 2em;
+  color: #c71585;
+}
+
+#SignUpForm,
+#Login {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+#SignUpForm button,
+#Login button {
+  margin-top: 1em;
+  width: 150px;
+  background: #c71585;
+  color: #ffe4d5;
+  padding: 10px;
 }
