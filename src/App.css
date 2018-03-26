@@ -37,10 +37,41 @@
 }
 
 #Footer {
+  background: #c71585;
   height: 75px;
   text-align: center;
   font-size: 12px;
   padding: 2em;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 600px) {
+  #Header {
+    height: 90px;
+    font-size: 15px;
+  }
+
+  #Header i {
+    font-size: 30px;
+  }
+
+  #Header .navbar-right li {
+    padding-right: 15px;
+    font-size: 10px;
+  }
+
+  #Header .navbar-right li i {
+    font-size: 20px;
+  }
+
+  #Footer {
+    background: #c71585;
+    height: 75px;
+    text-align: center;
+    font-size: 12px;
+    padding: 1em;
+    color: white;
+  }
 }
 
 #SignUpForm,

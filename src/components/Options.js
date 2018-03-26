@@ -25,7 +25,7 @@ const Options = data => {
       </div>
       <h1>NYC FOR HER</h1>
       <p>
-        Access non-profits and organizations who provide services for women in
+        Access non-profits and organizations that provide services for women in
         NYC
       </p>
     </div>
