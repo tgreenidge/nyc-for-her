@@ -23,7 +23,8 @@ class SignUpForm extends Component {
       <div id="SignUpForm">
         <div>
           <h5>Sign Up</h5>
-
+          <i className="fa fa-female" />
+          <br />
           <form onSubmit={this.handleSubmit}>
             <div className="form-group row">
               <label htmlFor="username" className="col-md-2 col-form-label">

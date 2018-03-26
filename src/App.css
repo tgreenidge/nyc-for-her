@@ -56,6 +56,12 @@
   font-weight: 600;
 }
 
+#SignUpForm i,
+#Login i {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
 #SignUpForm button,
 #Login button {
   margin-top: 1em;

@@ -23,7 +23,7 @@ class Login extends Component {
       <div id="Login">
         <div>
           <h5>Login</h5>
-
+          <i className="fa fa-female" />
           <form onSubmit={this.handleSubmit}>
             <div className="form-group row">
               <label htmlFor="username" className="col-md-2 col-form-label">
