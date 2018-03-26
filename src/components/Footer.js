@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div id="Footer">
       <div>
-        Services provided in this app is accessed from &nbsp;
+        Services provided in this app are accessed from &nbsp;
         <a href="https://data.cityofnewyork.us/Social-Services/NYC-Women-s-Resource-Network-Database/pqg4-dm6b">
           NYC Women's Resource Network Database
         </a>
