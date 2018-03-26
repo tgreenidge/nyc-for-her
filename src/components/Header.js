@@ -20,12 +20,12 @@ const Header = () => {
           </li>
           <li>
             <Link to="/signUp">
-              <i class="fa fa-user-plus" />Sign Up
+              <i className="fa fa-user-plus" />Sign Up
             </Link>
           </li>
           <li>
             <Link to="/Login">
-              <i class="fa fa-sign-in" />
+              <i className="fa fa-sign-in" />
               Login
             </Link>
           </li>

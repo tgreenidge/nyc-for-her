@@ -4,8 +4,7 @@
 }
 
 #Header {
-  background: #ffe4d5;
-  height: 140px;
+  height: 120px;
   text-align: left;
   font-size: 25px;
   padding: 10px;
@@ -38,11 +37,10 @@
 }
 
 #Footer {
-  background: #ffe4d5;
   height: 75px;
   text-align: center;
-  font-size: 20px;
-  padding: 1em;
+  font-size: 12px;
+  padding: 2em;
 }
 
 #SignUpForm,
@@ -53,6 +51,7 @@
 
 #SignUpForm,
 #Login {
+  border-top: 3px #c71585 solid;
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -62,6 +61,45 @@
   margin-top: 1em;
   width: 150px;
   background: #c71585;
-  color: #ffe4d5;
+  color: #f1f1f1;
   padding: 10px;
+}
+
+#Map {
+  width: 100%;
+  height: 600px;
+  background-color: grey;
+  border-top: 2px #c71585 solid;
+  border-bottom: 2px #c71585 solid;
+}
+
+#Options .options {
+  display: flex;
+  justify-content: center;
+  background-color: #c71585;
+  position: relative;
+}
+
+#Options .options > div {
+  background-color: #f1f1f1;
+  width: 200px;
+  margin: 10px;
+  text-align: center;
+  font-size: 30px;
+}
+
+#Options .options > div .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+#Options .options > div:hover .overlay {
+  opacity: 1;
 }
