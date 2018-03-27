@@ -32,4 +32,4 @@ class Map extends Component {
 
 export default Map({
   apiKey: AIzaSyBMXdg1z34XtDOGap7WWJpJc299K2gf7S0
-})(MapContainer);
+})(Map);
