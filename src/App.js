@@ -6,6 +6,8 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import SignUpForm from './components/SignUpForm';
 import Login from './components/Login';
+import NewResults from './components/NewResults';
+import SavedResults from './components/SavedResults';
 import axios from 'axios';
 
 class App extends Component {
@@ -41,6 +43,9 @@ class App extends Component {
         {...this.props}
       />
     );
+    const SavedResultsComponent = () => {
+      <SavedResults />;
+    };
     return (
       <div className="App">
         <Router>
@@ -50,6 +55,12 @@ class App extends Component {
               <Switch>
                 <Route exact path="/" component={HomeComponent} />
                 <Route exact path="/signUp" component={SignUpForm} />
+                <Route exact path="/login" component={LoginComponent} />
+                <Route
+                  exact
+                  path="/savedResults"
+                  component={SavedResultsComponent}
+                />
                 <Route exact path="/login" component={LoginComponent} />
               </Switch>
             </div>

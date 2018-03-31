@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Map from './Map';
+import MapContainer from './MapContainer';
 import Options from './Options';
 
 class Home extends Component {
@@ -8,7 +8,7 @@ class Home extends Component {
     return (
       <div>
         <Options />
-        <Map data={this.props.resources} />
+        <MapContainer data={this.props.resources} />
       </div>
     );
   }
