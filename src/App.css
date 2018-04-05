@@ -140,3 +140,9 @@
 #Options .options > div:hover .overlay {
   opacity: 1;
 }
+
+/* Error Message */
+.error-message {
+  color: red;
+  text-transform: none;
+}

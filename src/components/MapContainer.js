@@ -23,15 +23,15 @@ class MapContainer extends Component {
           }}
           zoom={this.props.zoom}
         >
-          <Marker
+          {/* <Marker
             title={'The marker`s title will appear as a tooltip.'}
             name={'SOMA'}
-            position={{ lat: 37.778519, lng: -122.40564 }}
+            position={{ lat: 37.7509, lng: -122.40564 }}
           />
           <Marker
             name={'Dolores park'}
             position={{ lat: 37.759703, lng: -122.428093 }}
-          />
+          /> */}
           <Marker />
           {/* <Marker
             name={'Your position'}

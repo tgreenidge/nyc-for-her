@@ -12,11 +12,11 @@ import axios from 'axios';
 
 class App extends Component {
   state = {
-    currentUser: {
-      userName: 'ejonelunas'
-    },
+    users: [],
     resources: []
   };
+
+
 
   async componentDidMount() {
     //get all womens resources from nyc open data
@@ -26,8 +26,28 @@ class App extends Component {
         const resources = response.data;
         this.setState({ resources });
       });
+    
+    const usersResponse = await axios.get(process.env.REACT_APP_HOST+'/users')
+    this.setState({
+        users: usersResponse.data,
+        usersResponse
+    });
   }
 
+  createUser = async (newUser) => {
+    try {
+      const newUserResponse = await axios.post(process.env.REACT_APP_HOST+'/users', newUser)
+      const newUserFromDatabase = newUserResponse.data
+
+      const updatedUsersList = [...this.state.users]
+      updatedUsersList.push(newUserFromDatabase)
+
+      this.setState({users: updatedUsersList})
+
+    } catch (error) {
+      console.log("Error creating new User")
+    }
+  }
   mockLogIn = logInInfo => {
     const newUser = { ...this.state.currentUser };
     newUser.userName = logInInfo.userName;
@@ -36,6 +56,7 @@ class App extends Component {
 
   render() {
     const HomeComponent = () => <Home resources={this.state.resources} />;
+
     const LoginComponent = () => (
       <Login
         user={this.state.currentUser}
@@ -43,9 +64,13 @@ class App extends Component {
         {...this.props}
       />
     );
-    const SavedResultsComponent = () => {
-      <SavedResults />;
-    };
+
+    const SignUpComponent = () => <SignUpForm createUser={this.createUser} />;
+
+    const SavedResultsComponent = () => <SavedResults />;
+
+    const NewResultsComponent = () => <NewResults data={this.state.resources} />;
+    
     return (
       <div className="App">
         <Router>
@@ -54,13 +79,10 @@ class App extends Component {
             <div className="content">
               <Switch>
                 <Route exact path="/" component={HomeComponent} />
-                <Route exact path="/signUp" component={SignUpForm} />
+                <Route exact path="/signUp" component={SignUpComponent} />
                 <Route exact path="/login" component={LoginComponent} />
-                <Route
-                  exact
-                  path="/savedResults"
-                  component={SavedResultsComponent}
-                />
+                <Route exact path="/savedResults" component={SavedResultsComponent} />
+                <Route exact path="/newResults" component={NewResultsComponent} />
                 <Route exact path="/login" component={LoginComponent} />
               </Switch>
             </div>

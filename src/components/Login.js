@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ErrorMessage from './ErrorMessage';
 
 class Login extends Component {
   state = {
@@ -26,12 +27,12 @@ class Login extends Component {
           <i className="fa fa-female" />
           <form onSubmit={this.handleSubmit}>
             <div className="form-group row">
-              <label htmlFor="username" className="col-md-2 col-form-label">
-                Username
+              <label htmlFor="email" className="col-md-2 col-form-label">
+                Email
               </label>
               <div className="col-md-10">
                 <input
-                  name="username"
+                  name="email"
                   type="text"
                   onChange={this.handleChange}
                   className="form-control form-control-md"
