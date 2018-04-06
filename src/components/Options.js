@@ -2,25 +2,30 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Options = data => {
+  let redirectToNew = false;
+  let redirectToSaved = false;
+  
   return (
     <div id="Options">
       {' '}
       <div className="options">
         <div>
-          Search For Services
-          <div className="overlay">
-            <div className="text">
-              <i className="fa fa-search" />
-            </div>
-          </div>
+          <Link to="/newResults">Search For Services
+            {/* <div className="overlay">
+              <div className="text">
+                <i className="fa fa-search" />
+              </div>
+            </div> */}
+          </Link>
         </div>
         <div>
-          My Saved Services
-          <div className="overlay">
+        <Link to="/savedResults">My Saved Services
+          {/* <div className="overlay">
             <div className="text">
               <i className="fa fa-bookmark" />
             </div>
-          </div>
+          </div> */}
+        </Link>
         </div>
       </div>
       <h1>NYC FOR HER</h1>

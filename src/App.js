@@ -9,14 +9,13 @@ import Login from './components/Login';
 import NewResults from './components/NewResults';
 import SavedResults from './components/SavedResults';
 import axios from 'axios';
+import Organization from './components/Organization';
 
 class App extends Component {
   state = {
     users: [],
     resources: []
   };
-
-
 
   async componentDidMount() {
     //get all womens resources from nyc open data
@@ -48,6 +47,7 @@ class App extends Component {
       console.log("Error creating new User")
     }
   }
+
   mockLogIn = logInInfo => {
     const newUser = { ...this.state.currentUser };
     newUser.userName = logInInfo.userName;
@@ -71,6 +71,8 @@ class App extends Component {
 
     const NewResultsComponent = () => <NewResults data={this.state.resources} />;
     
+    const OrganizationComponent = () => <Organization data={this.state.resources} />;
+    
     return (
       <div className="App">
         <Router>
@@ -83,7 +85,7 @@ class App extends Component {
                 <Route exact path="/login" component={LoginComponent} />
                 <Route exact path="/savedResults" component={SavedResultsComponent} />
                 <Route exact path="/newResults" component={NewResultsComponent} />
-                <Route exact path="/login" component={LoginComponent} />
+                <Route path="/organizations/:id" component={OrganizationComponent} />
               </Switch>
             </div>
             <Footer />

@@ -3,8 +3,10 @@ import ErrorMessage from './ErrorMessage';
 
 class Login extends Component {
   state = {
-    user: {}
+    email: "",
+    password: ""
   };
+  
   handleChange = event => {
     const attributeToChange = event.target.name;
     const newValue = event.target.value;

@@ -125,6 +125,11 @@
   font-size: 30px;
 }
 
+#Options .options > div a {
+  color: #c71585;
+  text-decoration: none;
+}
+
 #Options .options > div .overlay {
   position: absolute;
   top: 0;
@@ -145,4 +150,31 @@
 .error-message {
   color: red;
   text-transform: none;
+}
+
+.result-card {
+  background: #c71585;
+  color: white;
+  padding: 1em;
+  margin-bottom: 0.5em
+}
+
+.result-card .btn, .organization .btn {
+  color: #c71585;
+  background: white;
+}
+
+.result-header {
+  padding: 1em;
+  border-top: 2px #c71585 solid;
+}
+
+.result {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+ul {
+  list-style-type: none;
+  text-align: left;
 }
